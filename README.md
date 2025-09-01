@@ -1,5 +1,5 @@
 # CLI Launcher README
-![](https://github.com/lizeesheng/pic-down/blob/main/svg.svg)
+![](https://lizeesheng.github.io/pic-down/svg.svg)
 
 ![Github stars](https://img.shields.io/github/stars/lizeesheng/CLIL.svg)
 
