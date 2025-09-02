@@ -33,6 +33,14 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++11 launcher_main.cpp -o clil.exe
 
 ### Parameters
 
+#### `jdr.exe`
+
+`-cm` Sets the download source of Alibaba Dragonwell JDK.Using this parameter means you are in China Mainland.
+
+#### `clil.exe`
+
+`-cm` Sets the download source of Alibaba Dragonwell JDK.Using this parameter means you are in China mainland.
+
 `-v [GAME_VERSION]`	Specifies the version of Minecraft to launch. Must be a valid version present in version_manifest.json.
 
 `-dl`	Disables log output in the console.
@@ -79,6 +87,13 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++11 launcher_main.cpp -o clil.exe
 `clil.exe` 主程序。
 
 ### 参数
+
+#### `jdr.exe`
+
+`-cm` 设置 Alibaba Dragonwell JDK 下载源。使用此参数意味着您在中国大陆。
+
+#### `clil.exe`
+
 `-v [GAME_VERSION]` 启动游戏的版本，需要真实存在并位于 [version_manifest.json](https://piston-meta.mojang.com/mc/game/version_manifest.json) 中。
 
 `-dl` 关闭日志输出。
