@@ -27,7 +27,7 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++11 launcher_main.cpp -o clil.exe
 
 ### Binary Files
 
-`jdr.exe`: Java Downloader, invoked when the main program fails to detect Java installation files.
+`jdr.exe`: Java Downloader, invoked when the main program fails to detect JDK.
 
 `clil.exe`: Main program.
 
@@ -78,7 +78,7 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++11 launcher_main.cpp -o clil.exe
 
 ### 二进制文件
 
-`jdr.exe` Java下载器，在主程序未检测到 Java 安装文件时调用。
+`jdr.exe` Java下载器，在主程序未检测到 JDK 时调用。
 
 `clil.exe` 主程序。
 
