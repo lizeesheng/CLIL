@@ -33,10 +33,6 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++11 launcher_main.cpp -o clil.exe
 
 ### Parameters
 
-#### `jdr.exe`
-
-`-cm` Sets the download source of Alibaba Dragonwell JDK.Using this parameter means you are in China Mainland.
-
 #### `clil.exe`
 
 `-cm` Sets the download source of Alibaba Dragonwell JDK.Using this parameter means you are in China mainland.
@@ -88,11 +84,9 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++11 launcher_main.cpp -o clil.exe
 
 ### 参数
 
-#### `jdr.exe`
+#### `clil.exe`
 
 `-cm` 设置 Alibaba Dragonwell JDK 下载源。使用此参数意味着您在中国大陆。
-
-#### `clil.exe`
 
 `-v [GAME_VERSION]` 启动游戏的版本，需要真实存在并位于 [version_manifest.json](https://piston-meta.mojang.com/mc/game/version_manifest.json) 中。
 
