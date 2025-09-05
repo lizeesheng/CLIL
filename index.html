@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLIL - 轻量·极速·跨平台</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #4F46E5;
+            --primary-light: #818CF8;
+            --accent: #10B981;
+            --accent-hover: #059669;
+            --dark-bg: #0F172A;
+            --darker-bg: #030712;
+            --card-bg: rgba(30, 41, 59, 0.4);
+            --text-main: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --border-light: rgba(148, 163, 184, 0.1);
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.3);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.4);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--darker-bg), var(--dark-bg));
+            background-attachment: fixed;
+            color: var(--text-main);
+            line-height: 1.7;
+            min-height: 100vh;
+            padding-bottom: 4rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, var(--primary-light), rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, var(--text-secondary), rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 50px 160px, var(--primary-light), rgba(0,0,0,0)),
+                radial-gradient(1px 1px at 90px 40px, var(--text-secondary), rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, var(--primary-light), rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.3;
+            z-index: -1;
+            animation: starPulse 8s infinite alternate;
+        }
+
+        @keyframes starPulse {
+            0% { opacity: 0.2; }
+            100% { opacity: 0.4; }
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .hero {
+            padding: 10rem 0 8rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            border-radius: 50%;
+            opacity: 0.08;
+            z-index: -1;
+            animation: glowExpand 12s infinite alternate;
+        }
+
+        @keyframes glowExpand {
+            0% { width: 500px; height: 500px; opacity: 0.05; }
+            100% { width: 700px; height: 700px; opacity: 0.1; }
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, var(--primary-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 20px rgba(79, 70, 229, 0.3);
+            letter-spacing: -0.05em;
+        }
+
+        .tagline {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+            line-height: 1.8;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.1rem 2.2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 12px;
+            transition: var(--transition);
+            box-shadow: var(--shadow-md);
+            min-width: 180px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            gap: 0.6rem;
+        }
+
+        .btn img {
+            width: 20px;
+            height: 20px;
+            object-fit: contain;
+        }
+
+        .btn-project {
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            color: white;
+        }
+
+        .btn-project:hover {
+            background: linear-gradient(135deg, #4338CA, var(--primary));
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .btn-download {
+            background: linear-gradient(135deg, var(--accent), #34D399);
+            color: white;
+        }
+
+        .btn-download:hover {
+            background: linear-gradient(135deg, var(--accent-hover), var(--accent));
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .btn-tutorial {
+            background: transparent;
+            color: var(--text-main);
+            border: 2px solid var(--primary-light);
+        }
+
+        .btn-tutorial:hover {
+            background: rgba(79, 70, 229, 0.1);
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-4px);
+        }
+
+        .intro-section {
+            background: var(--card-bg);
+            border-radius: 20px;
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border-light);
+            padding: 4rem 2.5rem;
+            margin-bottom: 5rem;
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .intro-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--accent));
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            border-radius: 2px;
+        }
+
+        .project-desc {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .highlight {
+            color: var(--primary-light);
+            font-weight: 700;
+            text-shadow: 0 0 10px rgba(129, 140, 248, 0.3);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 2rem 1.8rem;
+            border-radius: 16px;
+            border: 1px solid var(--border-light);
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .feature:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+            background: rgba(15, 23, 42, 0.8);
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1.2rem;
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        .feature-desc {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-light);
+            margin-top: 6rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .footer-link {
+            color: var(--primary-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 8rem 0 6rem;
+            }
+
+            .logo {
+                font-size: 2.8rem;
+            }
+
+            .tagline {
+                font-size: 1.25rem;
+                max-width: 90%;
+            }
+
+            .button-container {
+                gap: 1rem;
+            }
+
+            .btn {
+                padding: 1rem 1.8rem;
+                font-size: 1rem;
+                min-width: 150px;
+            }
+
+            .intro-section {
+                padding: 3rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .project-desc {
+                font-size: 1rem;
+            }
+
+            .features {
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="hero">
+            <h1 class="logo">CLIL</h1>
+            <p class="tagline">用C++打造的轻量、极速、跨平台Minecraft启动器，<br>基于命令行启动</p>
+            
+            <div class="button-container">
+                <a href="https://github.com/lizeesheng/CLIL" class="btn btn-project">
+                    <img src="icon.png" alt="项目图标"> 项目地址
+                </a>
+                <a href="还没写" class="btn btn-download">
+                    <img src="icon.png" alt="下载图标"> 立即下载
+                </a>
+                <a href="https://github.com/lizeesheng/CLIL/blob/main/wiki.md" class="btn btn-tutorial">
+                    <img src="icon.png" alt="教程图标"> 查看教程
+                </a>
+            </div>
+        </section>
+
+        <section class="intro-section">
+            <h2 class="section-title">项目简介</h2>
+            <p class="project-desc">
+                <span class="highlight">CLIL</span> 使用c++编写 
+            </p>
+            <p class="project-desc">
+                用c++写的反正 
+            </p>
+        </section>
+
+        <footer>
+            <p>CLIL &copy; 2025 - CLIL</p>
+        </footer>
+    </div>
+</body>
+</html>
+    
