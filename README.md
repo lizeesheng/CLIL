@@ -6,8 +6,7 @@
 ## Disclaimer
 This is not an official project from Mojang Studios or Microsoft.
 
-This project uses [aria2](https://github.com/aria2/aria2) for downloading, and [7zip](https://7-zip.org/) for file extraction.
-
+This project uses [aria2](https://github.com/aria2/aria2) for downloading, and [7zip](https://7-zip.org/) for file extraction, and nlohmann json for json file reading and anazlying.
 
 ## Features
 - You can launch Minecraft with a single simple command in Windows command-line environments (e.g., cmd, PowerShell, etc.).
@@ -58,7 +57,9 @@ Before version v1.1, only vanilla Minecraft versions are supported for download;
 
 本项目使用 [aria2](https://github.com/aria2/aria2) 下载，
 
-[7zip](https://7-zip.org/) 解压缩。
+[7zip](https://7-zip.org/) 解压缩，
+
+nlomann json 读取、分析文件。
 
 ## 功能
 
