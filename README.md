@@ -41,7 +41,7 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 
 `-dl`	Disables log output in the console.
 
-`-m [MEM_SIZE]`	Sets the maximum memory allocated to the JVM. Defaults to 512MB if not specified. Unit: B (Bytes).
+`-m [MEM_SIZE]`	Sets the maximum memory allocated to the JVM. Defaults to 512MB if not specified. Unit: `KB` .
 
 `-a [ARGC]`	Adds additional JVM parameters.
 
@@ -92,7 +92,7 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 
 `-dl` 关闭日志输出。
 
-`-m [MEM_SIZE]` 设置 JVM 最大内存。不指定默认为 512MB ， 单位为 `B` 。
+`-m [MEM_SIZE]` 设置 JVM 最大内存。不指定默认为 512MB ， 单位为 `KB` 。
 
 `-a [ARGC]` 额外 JVM 参数。
 
