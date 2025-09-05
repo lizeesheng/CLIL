@@ -19,8 +19,8 @@ This project uses [aria2](https://github.com/aria2/aria2) for downloading, and [
 
 In the project directory, execute the following commands (ensure MinGW GCC is installed and fully supports C++ 11):
 ```bash
-g++ -Ofast -Wl,--stack=16777216 -std=c++11 java_downloader.cpp -o jdr.exe
-g++ -Ofast -Wl,--stack=16777216 -std=c++11 launcher_main.cpp -o clil.exe
+g++ -Ofast -Wl,--stack=16777216 -std=c++17 java_downloader.cpp -o jdr.exe
+g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 ```
 
 ## Usage
@@ -70,8 +70,8 @@ Before version v1.1, only vanilla Minecraft versions are supported for download;
 
 在项目目录下执行（已安装 MinGW GCC 并完全支持 C++ 11 ）：
 ```bash
-g++ -Ofast -Wl,--stack=16777216 -std=c++11 java_downloader.cpp -o jdr.exe
-g++ -Ofast -Wl,--stack=16777216 -std=c++11 launcher_main.cpp -o clil.exe
+g++ -Ofast -Wl,--stack=16777216 -std=c++17 java_downloader.cpp -o jdr.exe
+g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 ```
 
 ## 用法
