@@ -40,7 +40,7 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 
 `-dl`	Disables log output in the console.
 
-`-m [MEM_SIZE]`	Sets the maximum memory allocated to the JVM. Defaults to 512MB if not specified. Unit: `KB` .
+`-m [MEM_SIZE]`	Sets the maximum memory allocated to the JVM. Defaults to 512MB if not specified. Unit: `MB` .
 
 `-a [ARGC]`	Adds additional JVM parameters.
 
@@ -50,6 +50,10 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 
 Official account authentication is not supported at this time.
 Before version v1.1, only vanilla Minecraft versions are supported for download; modpacks and custom modded versions are not supported.
+
+## Example
+
+`clil.exe -cm -v 1.12.2 -m 2048 -un lizeesheng -dl`
 
 ## 声明
 
@@ -93,7 +97,7 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 
 `-dl` 关闭日志输出。
 
-`-m [MEM_SIZE]` 设置 JVM 最大内存。不指定默认为 512MB ， 单位为 `KB` 。
+`-m [MEM_SIZE]` 设置 JVM 最大内存。不指定默认为 512MB ， 单位为 `MB` 。
 
 `-a [ARGC]` 额外 JVM 参数。
 
@@ -104,5 +108,8 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 
 暂不支持正版验证，在 `v1.1` 前只支持原版的下载，不支持模组与整合版的下载。
 
+## 示例
+
+`clil.exe -cm -v 1.12.2 -m 2048 -un lizeesheng -dl`
 
 目前正在调试，在正式可用之前没有其他文件可供下载
