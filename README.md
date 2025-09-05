@@ -1,4 +1,5 @@
-# CLI Launcher README
+
+## CLI Launcher README
 ![](https://lizeesheng.github.io/pic-down/svg.svg)
 
 ![Github stars](https://img.shields.io/github/stars/lizeesheng/CLIL.svg)
@@ -113,3 +114,32 @@ g++ -Ofast -Wl,--stack=16777216 -std=c++17 launcher_main.cpp -o clil.exe
 `clil.exe -cm -v 1.12.2 -m 2048 -un lizeesheng -dl`
 
 目前正在调试，在正式可用之前没有其他文件可供下载
+
+
+
+
+
+
+
+
+
+
+------
+# GNU General Public License v3.0 (GPL-3.0) 许可声明
+
+> This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+> This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+> 本程序为自由软件：您可以依据自由软件基金会发布的《GNU 通用公共许可证》（GPL）的条款，重新分发本程序或对其进行修改。您可选择遵循该许可证的第 3 版，或（根据您的意愿）遵循任何后续版本。
+
+> 本程序的分发旨在提供实用价值，但不提供任何形式的担保；既不包含明示的担保（如商业适用性担保），也不包含默示的担保（如针对特定用途的适用性担保）。有关详细条款，请参阅《GNU 通用公共许可证》。
+
+
+
+## 版权声明（Copyright Notice）
+Copyright (C) [2025] [Lizeesheng/zcygod1337]  
+All rights reserved.  
+
+本软件基于 GNU General Public License v3.0 许可协议发布，详情参见本文件中的 GPL-3.0 许可声明部分。  
+This software is released under the GNU General Public License v3.0; see the GPL-3.0 license statement in this file for details.
